@@ -194,9 +194,13 @@ input {
             display: flex;
             align-items: center;
 
+            .cards__name-wrapper {
+                width: 100%;
+            }
+
 			.cards__stats-wrapper {
 				display: flex;
-				justify-content: space-between;
+                padding: 0 10px;
 
 				.stats {
 					width: 33%;
@@ -407,7 +411,7 @@ input {
 	}
 
 	input {
-		width: 40%;
+		width: 45%;
 	}
 
 	.container {
@@ -418,7 +422,7 @@ input {
 
 	/** CARDS ************************************/
 	.cards__container {
-		width: 40%;
+		width: 45%;
 	}
 
 	/** MODAL *************************/
