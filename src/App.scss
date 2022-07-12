@@ -431,6 +431,8 @@ input {
 		padding-right: 90px;
 
 		.modal__container {
+            width: calc(1200px - 2 * 90px);
+
 			.modal__modal {
 				.modal__left {
 					width: 10%;
