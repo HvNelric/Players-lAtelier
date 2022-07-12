@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useRef, useState } from 'react';
+import './App.scss';
+import PlayersCards from './components/PlayersCards/PlayersCards';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const inputRef = useRef()
+    const [searchWord, setSearchWord] = useState('')
+
+    const handleSubmit = e => {
+        e.preventDefault()
+        setSearchWord(inputRef.current.value)
+    }
+
+    const handleReset = () => {
+        setSearchWord('')
+    }
+
+    return (
+        <div className="container">
+            <form className='home__form' onSubmit={handleSubmit}>
+                <input ref={inputRef} type="text" placeholder='Rechercher un joueur' />
+            </form>
+            {searchWord !== '' && <div className='reset-players' onClick={handleReset}>Afficher tous les joueurs</div>}
+            <PlayersCards searchWord={searchWord} />
+        </div>
+    );
 }
 
 export default App;
