@@ -27,6 +27,7 @@ body {
 	font-size: 12px;
     background: var(--orange) url('/img/Home_bg.png') center center no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 *,
@@ -77,6 +78,7 @@ input {
 
 .container {
 	padding: 90px 15px 0 15px;
+    min-height: 100vh;
 }
 
 .row {
