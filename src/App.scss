@@ -76,7 +76,7 @@ input {
 }
 
 .container {
-	padding: 90px 15px;
+	padding: 90px 15px 0 15px;
 }
 
 .row {
@@ -417,7 +417,7 @@ input {
 	.container {
 		width: calc(1200px - 2 * 90px);
 		margin: 0 auto;
-		padding: 90px 0;
+		padding: 90px 0 0 0;
 	}
 
 	/** CARDS ************************************/
@@ -431,7 +431,7 @@ input {
 		padding-right: 90px;
 
 		.modal__container {
-            width: calc(1200px - 2 * 90px);
+            width: 100%;
 
 			.modal__modal {
 				.modal__left {
@@ -491,7 +491,8 @@ input {
 						.modal__stats-left {
 							width: 70%;
 							flex: 0 0 70%;
-                            padding: 50px 150px 0 150px;
+                            padding-top: 50px;
+                            padding-left: 20%;
 						}
 
 						.modal__stats-right {
